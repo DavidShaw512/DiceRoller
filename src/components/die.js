@@ -32,7 +32,7 @@ const Die = (props) => {
     }
 
     return (
-        <section className="die">
+        <div className="die">
             <button className="dieButton" onClick={props.click}>
                 <img className="dieImg" src={image} alt="die icon"/>
                 <p className="dieCounts">Dice: {dieCount}<br/>
@@ -40,9 +40,11 @@ const Die = (props) => {
                 </p>
             </button>
             <div className="result">
+                <p>Results:</p>
                 <p>{results}</p>
+                <button className="resetButton" onClick={props.reset}>Reset</button>
             </div>
-        </section>
+        </div>
     )
 }
 

@@ -14,6 +14,11 @@ class RollTable extends React.Component {
         d4results: []
     }
 
+    // roll = sides => {
+    //     const result = Math.ceil(Math.random() * sides);
+    //     this.setState
+    // }
+
     roll20 = () => {
         const result = Math.ceil(Math.random() * 20);
         this.setState ({
@@ -56,15 +61,21 @@ class RollTable extends React.Component {
         })
     }
 
+    reset = (sides) => {
+        if (sides === 20) {
+            console.log("reset20")
+        }
+    }
+
     render() {
         return (
             <section className="rollTable">
-                <Die sides={20} click={() => this.roll20()} results={this.state.d20results}/>
-                <Die sides={12} click={() => this.roll12()} results={this.state.d12results}/>
-                <Die sides={10} click={() => this.roll10()} results={this.state.d10results}/>
-                <Die sides={8} click={() => this.roll8()} results={this.state.d8results}/>
-                <Die sides={6} click={() => this.roll6()} results={this.state.d6results}/>
-                <Die sides={4} click={() => this.roll4()} results={this.state.d4results}/>
+                <Die sides={20} click={() => this.roll20()} results={this.state.d20results} reset={() => this.reset()}/>
+                <Die sides={12} click={() => this.roll12()} results={this.state.d12results} reset={() => this.reset()}/>
+                <Die sides={10} click={() => this.roll10()} results={this.state.d10results} reset={() => this.reset()}/>
+                <Die sides={8} click={() => this.roll8()} results={this.state.d8results} reset={() => this.reset()}/>
+                <Die sides={6} click={() => this.roll6()} results={this.state.d6results} reset={() => this.reset()}/>
+                <Die sides={4} click={() => this.roll4()} results={this.state.d4results} reset={() => this.reset()}/>
             </section>
         )
     }

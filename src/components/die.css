@@ -2,7 +2,7 @@
     display: inline-block;
     background-color: rgb(218, 218, 218);
     width: 90%;
-    max-width: 390px;
+    max-width: 600px;
     padding: 10px;
     margin: 5px;
     /* border: 1px solid; */
@@ -15,10 +15,17 @@
     font-size: 16px;
     float: left;
     width: 30%;
-    border-radius: 50px;
-    border: 5px solid;
-    background-color: white;
+    border: 3px solid;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    background-color: whitesmoke;
     cursor: pointer;
+    box-shadow: 0px 2px 3px grey;
+}
+
+.dieButton:active {
+    box-shadow: none;
+    border: 3px solid goldenrod;
 }
 
 .dieImg {
@@ -35,4 +42,13 @@
     padding-left: 7px;
     display: inline-block;
     width: 70%;
+}
+
+.resetButton {
+    background-color: rgb(139, 250, 148);
+    padding: 10px 30px;
+    font-size: 20px;
+    border: 3px solid green;
+    border-radius: 50px;
+    box-shadow: 0px 2px 3px grey;
 }
