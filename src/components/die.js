@@ -35,13 +35,15 @@ const Die = (props) => {
         <div className="die">
             <button className="dieButton" onClick={props.click}>
                 <img className="dieImg" src={image} alt="die icon"/>
-                <p className="dieCounts">Dice: {dieCount}<br/>
-                Total: {total}
+                <p className="dieCounts">
+                    <strong>d{props.sides}</strong><br/>
+                    Dice: {dieCount}<br/>
+                    Total: {total}
                 </p>
             </button>
             <div className="result">
-                <p>Results:</p>
-                <p>{results}</p>
+                <strong>Results:</strong>
+                <p>{results ? results : "None"}</p>
                 <button className="resetButton" onClick={props.reset}>Reset</button>
             </div>
         </div>

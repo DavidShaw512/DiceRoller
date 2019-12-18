@@ -11,13 +11,15 @@ class RollTable extends React.Component {
         d10results: [],
         d8results: [],
         d6results: [],
-        d4results: []
+        d4results: [],
     }
 
-    // roll = sides => {
-    //     const result = Math.ceil(Math.random() * sides);
-    //     this.setState
-    // }
+    roll = sides => {
+        const result = Math.ceil(Math.random() * sides);
+        this.setState ({
+            [`d${sides}results`]: [...`this.state.d${sides}results`, result]
+        })
+    }
 
     roll20 = () => {
         const result = Math.ceil(Math.random() * 20);
@@ -62,20 +64,20 @@ class RollTable extends React.Component {
     }
 
     reset = (sides) => {
-        if (sides === 20) {
-            console.log("reset20")
-        }
+        this.setState ({
+            [`d${sides}results`]: []
+        })
     }
 
     render() {
         return (
             <section className="rollTable">
-                <Die sides={20} click={() => this.roll20()} results={this.state.d20results} reset={() => this.reset()}/>
-                <Die sides={12} click={() => this.roll12()} results={this.state.d12results} reset={() => this.reset()}/>
-                <Die sides={10} click={() => this.roll10()} results={this.state.d10results} reset={() => this.reset()}/>
-                <Die sides={8} click={() => this.roll8()} results={this.state.d8results} reset={() => this.reset()}/>
-                <Die sides={6} click={() => this.roll6()} results={this.state.d6results} reset={() => this.reset()}/>
-                <Die sides={4} click={() => this.roll4()} results={this.state.d4results} reset={() => this.reset()}/>
+                <Die sides={20} click={() => this.roll20()} results={this.state.d20results} reset={() => this.reset(20)}/>
+                <Die sides={12} click={() => this.roll12()} results={this.state.d12results} reset={() => this.reset(12)}/>
+                <Die sides={10} click={() => this.roll10()} results={this.state.d10results} reset={() => this.reset(10)}/>
+                <Die sides={8} click={() => this.roll8()} results={this.state.d8results} reset={() => this.reset(8)}/>
+                <Die sides={6} click={() => this.roll6()} results={this.state.d6results} reset={() => this.reset(6)}/>
+                <Die sides={4} click={() => this.roll4()} results={this.state.d4results} reset={() => this.reset(4)}/>
             </section>
         )
     }
