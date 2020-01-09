@@ -1,0 +1,66 @@
+.die {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 5px;
+    /* border: 1px solid; */
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+
+.dieButton {
+    padding: 5px;
+    font-size: 16px;
+    float: left;
+    width: 30%;
+    border: 3px solid;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    background-color: #cff8ff;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px grey;
+}
+
+.dieButton:active {
+    box-shadow: none;
+    border: 3px solid goldenrod;
+}
+
+.dieImg {
+    width: 80%;
+}
+
+.dieCounts {
+    margin: 0px auto 10px auto;
+    font-size: 14px;
+}
+
+.result {
+    font-size: 18px;
+    padding-left: 7px;
+    display: inline-block;
+    width: 70%;
+}
+
+.resetButton {
+    background-color: rgb(139, 250, 148);
+    padding: 10px 30px;
+    font-size: 20px;
+    border: 3px solid green;
+    border-radius: 50px;
+    box-shadow: 0px 2px 3px grey;
+}
+
+@media only screen and (min-width: 500px) {
+    .dieButton {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .dieButton {
+        width: 15%;
+    }
+}

@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
-// import Dice from "./components/dice"
 import RollTable from './components/rollTable'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Dice Roller</h1>
+        <h3>Click the blue dice icons to roll a die, and click the green buttons to reset your rolls!</h3>
       </header>
       <RollTable/>
     </div>
