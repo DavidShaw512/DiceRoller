@@ -11,7 +11,7 @@ class RollTable extends React.Component {
         d10results: [],
         d8results: [],
         d6results: [],
-        d4results: [],
+        d4results: []
     }
 
     roll = sides => {
